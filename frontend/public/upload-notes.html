@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Notes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="navbar-placeholder"></header>
+    <main class="upload-notes-main">
+        <h1>Upload Your Notes</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="text" id="note-title" placeholder="Title" required>
+            <textarea id="note-description" placeholder="Description (Optional)"></textarea>
+            <select id="note-category" required>
+                <option value="">Select Category</option>
+                <option value="Notes">Notes</option>
+                <option value="Assignments">Assignments</option>
+                <option value="Question Papers">Question Papers</option>
+            </select>
+            <input type="text" id="note-subject" placeholder="Subject" required>
+            <select id="note-branch" required>
+                <option value="">Select Branch</option>
+            </select>
+            <select id="note-semester" required>
+                <option value="">Select Semester</option>
+            </select>
+            <input type="file" id="note-file" required>
+            <button type="submit" class="cta-button">Upload Note</button>
+        </form>
+    </main>
+    <footer id="footer-placeholder"></footer>
+    <script src="js/main.js"></script>
+    <script src="js/upload.js"></script>
+</body>
+</html>

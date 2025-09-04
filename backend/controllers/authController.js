@@ -80,14 +80,18 @@ exports.forgotPassword = async (req, res) => {
         pass: process.env.EMAIL_PASS
       }
     });
-
+    
+    // Use the RENDER_EXTERNAL_URL environment variable if it exists, otherwise fall back to the host header
+    const host = process.env.RENDER_EXTERNAL_URL || req.headers.host;
+    const resetUrl = `https://${host}/reset-password.html?token=${token}`;
+    
     const mailOptions = {
       to: user.email,
       from: process.env.EMAIL_USER,
       subject: 'Password Reset',
       text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n` +
             `Please click on the following link, or paste this into your browser to complete the process:\n\n` +
-            `http://${req.headers.host}/reset-password.html?token=${token}\n\n` +
+            `${resetUrl}\n\n` +
             `If you did not request this, please ignore this email and your password will remain unchanged.\n`
     };
 

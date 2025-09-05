@@ -11,3 +11,6 @@ your API keys and database credentials, from being committed to GitHub.
 Uploads
 This ignores the temporary folder used by multer to store uploaded files.
 uploads/
+
+deepa/
+deepa.pub/

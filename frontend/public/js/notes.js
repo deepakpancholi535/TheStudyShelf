@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const semesterFilter = document.getElementById('semester-filter');
     const searchInput = document.getElementById('search-input');
 
-    const branches = ['CSE', 'ECE', 'Mechanical'];
+    const branches = ['CSE', 'ECE', 'Mechanical','IT','IoT','AI','DS','Civil','EE'];
     const semesters = [1, 2, 3, 4, 5, 6, 7, 8];
 
     branches.forEach(branch => {

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const footerHTML = `
         <div class="footer">
-            <p>&copy; 2023 NoteShare. All rights reserved.</p>
+            <p>&copy; 2025 TheStudyShelf. All rights reserved.</p>
         </div>
     `;
     document.getElementById('footer-placeholder').innerHTML = footerHTML;
